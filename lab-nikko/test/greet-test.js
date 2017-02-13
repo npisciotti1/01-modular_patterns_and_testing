@@ -3,11 +3,13 @@
 const greet = require('../lib/greet.js');
 const assert = require('assert');
 
+var name = 'Nikko';
+
 describe('Greet Module', function() {
   describe('#greeting', function(){
-    it('function should return Hello Nikko, pleasure to meet you', function(){
-      var output = greet.greeting(process.argv[2]);
-      assert.ok(output === `Hello ${process.argv[2]}, pleasure to meet you`, 'Output does not match - fail');
+    it(`function should return Hello ${name}, pleasure to meet you`, function(){
+      var output = greet.greeting(name);
+      assert.ok(output === `Hello ${name}, pleasure to meet you`, 'Output does not match - fail');
     });
   });
   describe('#goodbye', function() {
