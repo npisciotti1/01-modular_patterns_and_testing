@@ -6,8 +6,8 @@ const assert = require('assert');
 describe('Greet Module', function() {
   describe('#greeting', function(){
     it('function should return Hello Nikko, pleasure to meet you', function(){
-      var output = greet.greeting('Nikko');
-      assert.ok(output === 'Hello Nikko, pleasure to meet you', 'Output does not match - fail');
+      var output = greet.greeting(process.argv[2]);
+      assert.ok(output === `Hello ${process.argv[2]}, pleasure to meet you`, 'Output does not match - fail');
     });
   });
   describe('#goodbye', function() {
